@@ -1,0 +1,21 @@
+{
+  "name": "craftline-trade-knowledge-platform",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Skilled Trade Knowledge Documentation Platform",
+  "engines": {
+    "node": ">=24.0.0"
+  },
+  "scripts": {
+    "start": "node server.js",
+    "check": "node --check server.js && node --check public/app.js && node --check scripts/migrate-sqlite-to-postgres.js",
+    "test": "node test/smoke.js",
+    "benchmark": "node test/performance.js",
+    "benchmark:host": "node test/benchmark-host.js",
+    "migrate:postgres": "node scripts/migrate-sqlite-to-postgres.js"
+  },
+  "dependencies": {
+    "express": "5.1.0",
+    "pg": "^8.23.0"
+  }
+}
