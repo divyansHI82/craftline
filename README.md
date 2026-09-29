@@ -46,3 +46,10 @@ The included `.env.example` is safe to share; never publish `.env`, a production
 Free-tier limits matter: Render's free web service can run only one instance, spins down after 15 minutes idle, and may take about a minute to wake. Free Render Postgres is limited to 1 GB, has no backups, and expires after 30 days. The app is built with PostgreSQL shared storage so it can use multiple app instances, but horizontal scaling requires a paid web-service plan; the free deployment is a learning/demo deployment, not production capacity.
 
 The hosting account and repository connection are user-owned steps; this workspace does not have access to publish to a hosting account.
+## Source code layout
+The complete application source is stored in this repository as regular files and folders:
+- `public/index.html` and `public/app.js` contain the frontend.
+- `server.js` contains the Node.js backend and API.
+- `scripts/` contains the database migration utility.
+- `test/` contains the smoke, performance, and benchmark scripts.
+- `package.json`, `pnpm-lock.yaml`, and `render.yaml` contain project and deployment configuration.
